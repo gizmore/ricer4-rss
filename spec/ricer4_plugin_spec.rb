@@ -20,4 +20,12 @@ describe Ricer4::Plugins::Rss do
     expect(bot.exec_line_for("Rss/Add", "WC https://www.wechall.net/news/feed")).to start_with("msg_added:")
   end
   
+  it("can utilize abbo and unabbo") do
+    expect(bot.exec_line_for("Rss/Unabbo", "WC")).to start_with("msg_unabbonemented:")
+    expect(bot.exec_line_for("Rss/Abbo", "WC")).to start_with("msg_abbonemented:")
+    expect(bot.exec_line_for("Rss/List", "WC")).to start_with("msg_list_item_page:")
+    
+    
+  end
+  
 end
