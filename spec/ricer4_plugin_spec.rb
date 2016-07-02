@@ -24,8 +24,6 @@ describe Ricer4::Plugins::Rss do
     expect(bot.exec_line_for("Rss/Unabbo", "WC")).to start_with("msg_unabbonemented:")
     expect(bot.exec_line_for("Rss/Abbo", "WC")).to start_with("msg_abbonemented:")
     expect(bot.exec_line_for("Rss/List", "WC")).to start_with("msg_list_item_page:")
-    
-    
   end
   
 end
